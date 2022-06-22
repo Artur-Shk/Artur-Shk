@@ -36,8 +36,9 @@ Here are some ideas to get you started:
 <img src="https://komarev.com/ghpvc/?username=Artur-Shk&style=plastic&color=brightgreen" alt="badges"/>
 </div>
 
+<div  align="center">
 <h1>
-  <align="center">
   WELCOME
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="10px"/>
 </h1>
+</div>
