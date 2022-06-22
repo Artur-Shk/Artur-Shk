@@ -29,8 +29,8 @@ Here are some ideas to get you started:
   </a>
   
   <a href="https://t.me/AShkurat">
-    <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/telegram_logo_icon_134592.png" alt="Twitter Badge"/>
+    <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/telegram_logo_icon_134592.png" alt="Telegram Badge"/>
   </a>
 </div>
 
-<img src="https://komarev.com/ghpvc/?username=your-github-username&style=flat-square&color=blue" alt=""/>
+<img src="https://komarev.com/ghpvc/?username=your-github-username&style=flat-square&color=green" alt=""/>
