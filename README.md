@@ -38,6 +38,7 @@ Here are some ideas to get you started:
 
 <div  align="center">
 <h1>
-  <img src="https://giphy.com/embed/rzhRWftV63NbdJEnPj width=200 height=200 frameBorder=0 class=giphy-embed allowFullScreen></iframe><p><a href=https://giphy.com/gifs/school-student-erma-fiend-rzhRWftV63NbdJEnPj>via GIPHY</a></p>"
+  hey there
+  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 </h1>
 </div>
