@@ -39,8 +39,8 @@ Here are some ideas to get you started:
 <div align="center">
   <img src="https://media.giphy.com/media/xBTSwCTFkgfcdTjHMz/giphy.gif" width="300" height="300"/>
 </div>
----
+
 ### :man_technologist: About Me :
 I am a QA engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from UKRAINE.
----
+
 ### :hammer_and_wrench: Languages and Tools :
