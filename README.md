@@ -24,7 +24,7 @@ Here are some ideas to get you started:
   <a href="https://www.facebook.com/Shkurat.A">
     <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/facebook_logo_icon_134597.png" alt="facebook Badge"/>
   </a>
-   <a href="a.s.shkurat@gmail.com">
+   <a href="https://www.instagram.com/artur.shkurat">
     <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/instagram_logo_icon_134593.png" alt="Instagram Badge"/>
   </a>
   
