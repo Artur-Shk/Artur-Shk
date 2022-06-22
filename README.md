@@ -21,7 +21,7 @@ Here are some ideas to get you started:
   <a href="https://www.linkedin.com/in/artur-shkurat-5ba396232/">
     <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/linkedin_logo_icon_134604.png" alt="LinkedIn Badge"/>
   </a>
-  <a href="your-youtube-URL">
+  <a href="https://www.facebook.com/Shkurat.A">
     <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/facebook_logo_icon_134597.png" alt="facebook Badge"/>
   </a>
   <a href="your-twitter-URL">
