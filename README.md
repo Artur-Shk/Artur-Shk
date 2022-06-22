@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 <div id="header" align="center">
-  <img src="https://media.giphy.com/media/bHazRMJ7RhlcUm45QR/giphy.gif" width="300"/>
+  <img src="https://media.giphy.com/media/hSGvERbSwOJFdwZPQg/giphy.gif" width="300"/>
 </div>
 <div id="badges" align="center">
   <a href="https://www.linkedin.com/in/artur-shkurat-5ba396232/">
