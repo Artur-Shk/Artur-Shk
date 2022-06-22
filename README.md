@@ -1,4 +1,4 @@
-### WELCOME👋
+
 
 <!--
 **Artur-Shk/Artur-Shk** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -35,3 +35,8 @@ Here are some ideas to get you started:
 <div  align="center">
 <img src="https://komarev.com/ghpvc/?username=Artur-Shk&style=plastic&color=brightgreen" alt="badges"/>
 </div>
+
+<h1>
+  WELCOME
+  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
+</h1>
