@@ -24,7 +24,7 @@ Here are some ideas to get you started:
   <a href="https://www.facebook.com/Shkurat.A">
     <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/facebook_logo_icon_134597.png" alt="facebook Badge"/>
   </a>
-  <a href="your-twitter-URL">
-    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
+  <a href="https://t.me/AShkurat">
+    <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/telegram_logo_icon_134592.png" alt="Twitter Badge"/>
   </a>
 </div>
