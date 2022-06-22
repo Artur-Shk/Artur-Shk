@@ -35,9 +35,9 @@ Here are some ideas to get you started:
 <div  align="center">
 <img src="https://komarev.com/ghpvc/?username=Artur-Shk&style=plastic&color=brightgreen" alt="badges"/>
 </div>
+
 <h1>
 <div align="center">
-  V
   <img src="https://media.giphy.com/media/xBTSwCTFkgfcdTjHMz/giphy.gif" width="300" height="300"/>
 </div>
 <h1>
