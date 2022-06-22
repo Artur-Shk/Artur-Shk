@@ -37,6 +37,7 @@ Here are some ideas to get you started:
 </div>
 <h1>
 <div align="center">
+  V
   <img src="https://media.giphy.com/media/xBTSwCTFkgfcdTjHMz/giphy.gif" width="300" height="300"/>
 </div>
 <h1>
