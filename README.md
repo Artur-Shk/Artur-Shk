@@ -58,3 +58,6 @@ I am a QA engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/gi
     <img src="https://cdn.icon-icons.com/icons2/159/PNG/256/brackets_22570.png" title="/brackets" alt="/brackets" width="50" height="50"/>&nbsp;
 </div>
 
+---
+
+### :fire: My Stats :
