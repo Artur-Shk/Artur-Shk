@@ -33,5 +33,5 @@ Here are some ideas to get you started:
 </div>
 
 <div  align="center">
-<img src="https://komarev.com/ghpvc/?username=Artur-Shk&style=flat-square&color=green" alt="badges"/>
+<img src="https://komarev.com/ghpvc/?username=Artur-Shk&style=plastic&color=brightgreen" alt="badges"/>
 </div>
