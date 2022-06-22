@@ -33,4 +33,4 @@ Here are some ideas to get you started:
   </a>
 </div>
 
-<img src="https://komarev.com/ghpvc/?username=your-github-username&style=flat-square&color=green" alt=""/>
+<img src="https://komarev.com/ghpvc/?username=Artur-Shk&style=flat-square&color=green" alt=""/>
