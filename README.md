@@ -25,7 +25,7 @@ Here are some ideas to get you started:
     <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/facebook_logo_icon_134597.png" alt="facebook Badge"/>
   </a>
    <a href="a.s.shkurat@gmail.com">
-    <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/whatsapp_logo_icon_134602.png" alt="Gmail Badge"/>
+    <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/instagram_logo_icon_134593.png" alt="Instagram Badge"/>
   </a>
   
   <a href="https://t.me/AShkurat">
