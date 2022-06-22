@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 <div id="header" align="center">
-  <img src="https://media.giphy.com/media/zSz2KsgySmfjbb8NJS/giphy.gif" width="180"/>
+  <img src="https://media.giphy.com/media/zSz2KsgySmfjbb8NJS/giphy.gif" width="300"/>
 </div>
 <div id="badges" align="center">
   <a href="https://www.linkedin.com/in/artur-shkurat-5ba396232/">
@@ -36,8 +36,4 @@ Here are some ideas to get you started:
 <img src="https://komarev.com/ghpvc/?username=Artur-Shk&style=plastic&color=brightgreen" alt="badges"/>
 </div>
 
-<div  align="center">
-<h1>
-  <img src="" width="300"/>
-</h1>
-</div>
+
