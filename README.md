@@ -38,6 +38,6 @@ Here are some ideas to get you started:
 
 <div  align="center">
 <h1>
- WELCOME 
+  <img src="https://media.giphy.com/media/D8fvSxq8z4vPLDdcXi/giphy.gif" width="100"/>
 </h1>
 </div>
