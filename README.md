@@ -19,7 +19,7 @@ Here are some ideas to get you started:
 </div>
 <div id="badges">
   <a href="https://www.linkedin.com/in/artur-shkurat-5ba396232/">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+    <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/linkedin_logo_icon_134604.png" alt="LinkedIn Badge"/>
   </a>
   <a href="your-youtube-URL">
     <img src="https://cdn.icon-icons.com/icons2/1582/PNG/48/facebook_108044.png" alt="facebook Badge"/>
