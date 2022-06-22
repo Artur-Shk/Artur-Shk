@@ -24,6 +24,10 @@ Here are some ideas to get you started:
   <a href="https://www.facebook.com/Shkurat.A">
     <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/facebook_logo_icon_134597.png" alt="facebook Badge"/>
   </a>
+   <a href="a.s.shkurat@gmail.com">
+    <img src="https://cdn.icon-icons.com/icons2/70/PNG/512/gmail_14189.png" alt="Gmail Badge"/>
+  </a>
+  
   <a href="https://t.me/AShkurat">
     <img src="https://cdn.icon-icons.com/icons2/2232/PNG/48/telegram_logo_icon_134592.png" alt="Twitter Badge"/>
   </a>
