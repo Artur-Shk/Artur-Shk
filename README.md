@@ -39,6 +39,5 @@ Here are some ideas to get you started:
 <div  align="center">
 <h1>
  WELCOME 
- width="30px"
 </h1>
 </div>
