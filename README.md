@@ -61,6 +61,10 @@ I am a QA engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/gi
 <a href="https://github.com/Artur-Shk/HW1_Group_28">
 <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/git_plain_logo_icon_146507.png" title="git" alt="git" width="50" height="50"/>&nbsp;
 </a>  
+</a>
+<a href="https://github.com/Artur-Shk/JS_HW">
+<img src="https://cdn.icon-icons.com/icons2/2108/PNG/512/javascript_icon_130900.png" title="js" alt="js" width="50" height="50"/>&nbsp;
+</a> 
 <img src="https://cdn.icon-icons.com/icons2/2406/PNG/512/github_git_icon_145985.png" title="github" alt="github" width="50" height="50"/>&nbsp;
 <img src="https://cdn.icon-icons.com/icons2/1495/PNG/512/dbeaver_103190.png" title="dbeaver" alt="dbeaver" width="50" height="50"/>&nbsp;
 <img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/microsoft_visual_studio_code_alt_macos_bigsur_icon_189952.png" title="microsoft_visual_studio" alt="microsoft_visual_studio" width="50" height="50"/>&nbsp; 
