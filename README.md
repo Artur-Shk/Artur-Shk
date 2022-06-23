@@ -44,7 +44,7 @@ Here are some ideas to get you started:
 
 ### :man_technologist: About Me :
 I am a QA engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from UKRAINE.
-- 🌱 Now I'm studying at the author's course of Vadim Ksendzov.
+- 🌱 Now I'm studying at the author's course by Vadim Ksendzov.
 - ⚡ In my free time, I read tech articles.
 ---
 
