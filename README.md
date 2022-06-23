@@ -57,7 +57,7 @@ I am a QA engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/gi
 <a href="https://github.com/Artur-Shk/HW_SQL">
 <img src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original-wordmark.svg" title="postgresql" alt="postgresql" width="50"   height="50"/>&nbsp;
 </a>
-<img src="https://w7.pngwing.com/pngs/192/492/png-transparent-git-bash-hd-logo-thumbnail.png" title="git" alt="git" width="50" height="50"/>&nbsp;
+<img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/git_plain_logo_icon_146507.png" title="git" alt="git" width="50" height="50"/>&nbsp;
 <img src="https://cdn.icon-icons.com/icons2/2406/PNG/512/github_git_icon_145985.png" title="github" alt="github" width="50" height="50"/>&nbsp;
 <img src="https://cdn.icon-icons.com/icons2/1495/PNG/512/dbeaver_103190.png" title="dbeaver" alt="dbeaver" width="50" height="50"/>&nbsp;
 <img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/microsoft_visual_studio_code_alt_macos_bigsur_icon_189952.png" title="microsoft_visual_studio" alt="microsoft_visual_studio" width="50" height="50"/>&nbsp; 
