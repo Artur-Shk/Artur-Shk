@@ -52,7 +52,7 @@ I am a QA engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/gi
   <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="git" alt="git" width="50" height="50"/>&nbsp;
   <img src="https://cdn.icon-icons.com/icons2/2406/PNG/512/github_git_icon_145985.png" title="github" alt="github" width="50" height="50"/>&nbsp;
    </a>
-  <a href="https://t.me/AShkurat](https://github.com/Artur-Shk/HW_Postman">
+  <a href="https://github.com/Artur-Shk/HW_Postman">
   <img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/postman_macos_bigsur_icon_189815.png" title="postman" alt="postman" width="50" height="50"/>&nbsp;
    </a>
   <img src="https://cdn.icon-icons.com/icons2/1495/PNG/512/dbeaver_103190.png" title="dbeaver" alt="dbeaver" width="50" height="50"/>&nbsp;
