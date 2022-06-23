@@ -56,7 +56,10 @@ I am a QA engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/gi
   <img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/postman_macos_bigsur_icon_189815.png" title="postman" alt="postman" width="50" height="50"/>&nbsp;
    </a>
   <img src="https://cdn.icon-icons.com/icons2/1495/PNG/512/dbeaver_103190.png" title="dbeaver" alt="dbeaver" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original-wordmark.svg" title="postgresql" alt="postgresql" width="50" height="50"/>&nbsp;
+ <a href="https://github.com/Artur-Shk/HW_SQL">
+   </a>
+ <img src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original-wordmark.svg" title="postgresql" alt="postgresql" width="50" height="50"/>&nbsp;
+ 
  <img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/microsoft_visual_studio_code_alt_macos_bigsur_icon_189952.png" title="microsoft_visual_studio" alt="microsoft_visual_studio" width="50" height="50"/>&nbsp; 
     <img src="https://cdn.icon-icons.com/icons2/159/PNG/256/brackets_22570.png" title="/brackets" alt="/brackets" width="50" height="50"/>&nbsp;
 </div>
