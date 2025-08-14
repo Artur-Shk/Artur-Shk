@@ -1,9 +1,16 @@
+def greet_user():
+    first_name = input("Введіть ваше ім'я: ")
+    last_name = input("Введіть ваше прізвище: ")
+    greeting = "Привіт {} {}! Радий вас бачити!"
+    result = greeting.format(first_name, last_name)
+    print(result)
 
-name = input("Введіть ваше ім'я: ")
 
-greeting = "Привіт {}! Радий вас бачити!"
+def user_country():
+    country = str(input("Введіть країну вашого проживання:" ))
+    if country == "Росія":
+        print("Кацап, іди нахуй")
+    else:
+        greet_user()
 
-result = greeting.format(name)
-
-print(result)
-
+user_country()
