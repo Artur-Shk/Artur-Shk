@@ -8,7 +8,7 @@ def greet_user():
 
 def user_country():
     country = str(input("Введіть країну вашого проживання:" ))
-    if country == "Росія":
+    if country.lower() == "росія":
         print("Кацап, іди нахуй")
     else:
         greet_user()
