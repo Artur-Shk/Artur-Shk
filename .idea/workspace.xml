@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="fc8d27df-5f8f-491a-9e96-8f7595a39ce1" name="Changes" comment="first commit" />
+=======
+    <list default="true" id="fc8d27df-5f8f-491a-9e96-8f7595a39ce1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string.py" afterDir="false" />
+    </list>
+>>>>>>> 391ac73d96e3fdeec628bb2584a6850c86f7b140
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,11 +30,14 @@
     </option>
   </component>
   <component name="Git.Settings">
+<<<<<<< HEAD
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="asshk &lt;a.s.shkurat@gmail.com&gt;" />
       </list>
     </option>
+=======
+>>>>>>> 391ac73d96e3fdeec628bb2584a6850c86f7b140
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubDefaultAccount">
@@ -90,6 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1755188161050</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
       <created>1755193312642</created>
@@ -154,4 +170,8 @@
     <MESSAGE value="first commit" />
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
+=======
+    <servers />
+  </component>
+>>>>>>> 391ac73d96e3fdeec628bb2584a6850c86f7b140
 </project>
