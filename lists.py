@@ -66,13 +66,13 @@ for n in unique_names:
 # ПРАКТИКА list comprehension
 
 # Створи список квадратів чисел від 1 до 10.
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-squares_of_numbers = [n**2 for n in numbers]
+squares_of_numbers = [n**2 for n in range(1,11)]
 print(f'Список квадратів чисел від 1 до 10: {squares_of_numbers}')
 
 #Створи список усіх парних чисел від 0 до 20.
-numbers_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-even_numbers = [n for n in numbers_list if n % 2 == 0]
+# numbers_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+# even_numbers = [n for n in numbers_list if n % 2 == 0]
+even_numbers = [n for n in range(0, 21, 2)]
 print(f'Список усіх парних чисел від 0 до 20: {even_numbers}')
 
 #Створи новий список з довжинами цих слів.
