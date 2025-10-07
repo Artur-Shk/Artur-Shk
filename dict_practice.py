@@ -75,4 +75,4 @@
 words = {"apple": 3, "banana": 5, "cherry": 9, "pear": 7}
 max_key = max(words, key=words.get)
 
-print("Ключ із найбільшим значенням:", max_key)
+print("Ключ із найбільшим значенням: 2", max_key)
