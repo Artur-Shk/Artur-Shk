@@ -18,10 +18,6 @@
 </div>
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=Artur-Shk&style=plastic&color=brightgreen" alt="Profile views" />
-</div>
-
-<div align="center">
   <img src="https://media.giphy.com/media/xBTSwCTFkgfcdTjHMz/giphy.gif" width="300" height="300" />
 </div>
 
