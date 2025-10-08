@@ -1,44 +1,38 @@
-# class Point:
-#     def __new__(cls, *args, **kwargs):
-#         print("виклик __new__ для "+ str(cls))
-#         return super().__new__(cls)
-#
-#     def __init__(self, x = 0, y = 0):
-#         print("виклик __init__ для "+ str(self))
-#         self.x = x
-#         self.y = y
-#
-# pt = Point(1,2)
-# print(pt)
+from accessify import private, protected
 
-class DataBase:
-    __instance = None
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.grades = []
 
-    def __new__(cls, *args, **kwargs):
-        if cls.__instance is None:
-            cls.__instance = super().__new__(cls)
-        return cls.__instance
+    @protected
+    def add_grade(self, grade):
+        self.grades.append(grade)
 
-    def __del__(self):
-        DataBase.__instance = None
+    @private
+    def average(self):
+        if len(self.grades) == 0:
+            return 0
+        return sum(self.grades) / len(self.grades)
 
-    def __init__(self, user, psw, port):
-        self.user = user
-        self.psw = psw
-        self.port = port
+    def info(self):
+        print(f"Учень {self.name}, вік: {self.age}, середня оцінка: {self.average()}")
 
-    def connect(self):
-        print(f"З'єднання з БД: {self.user}, {self.psw, self.port}")
+# Наслідування та поліморфізм
+class AdvancedStudent(Student):
+    def info(self):
+        avg = self._Student__average()  # виклик private методу базового класу
+        print(f"Учень {self.name} (Advanced), вік: {self.age}, середня оцінка: {avg}. Продовжує поглиблене навчання!")
 
-    def close(self):
-        print("Закриття з'єднання з БД")
 
-    def read(self):
-        return "Дані з БД"
+# --- Тестування ---
+s1 = Student("Олег", 14)
+s1.add_grade(8)
+s1.add_grade(9)
+s1.info()
 
-    def write(self, data):
-        print(f"Запис в БД {data}")
-
-db = DataBase("root", "1234", 80)
-db2 = DataBase("root2", "1234567", 40)
-print(id(db), id(db2))
+s2 = AdvancedStudent("Марія", 15)
+s2.add_grade(10)
+s2.add_grade(9)
+s2.info()
