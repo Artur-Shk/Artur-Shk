@@ -49,15 +49,15 @@ class Contacts:
         ]))
 
 
-c1 = Contacts("Іван", "Іваненко", "ivan@example.com", "123456789")
-c1.add_contact()
-
-c2 = Contacts("Марія", "Петренко", "maria@example.com", "987654321")
-c2.add_contact()
-
-Contacts.show_alone_contact("Іван", "Іваненко")
-
-c3 = Contacts("Марія", "Петренко", "maria@example.com", "987654321")
-c3.remove_contact()
-
-Contacts.show_contacts()
+# c1 = Contacts("Іван", "Іваненко", "ivan@example.com", "123456789")
+# c1.add_contact()
+#
+# c2 = Contacts("Марія", "Петренко", "maria@example.com", "987654321")
+# c2.add_contact()
+#
+# Contacts.show_alone_contact("Іван", "Іваненко")
+#
+# c3 = Contacts("Марія", "Петренко", "maria@example.com", "987654321")
+# c3.remove_contact()
+#
+# Contacts.show_contacts()
