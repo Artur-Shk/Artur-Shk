@@ -25,4 +25,5 @@ def load_contacts_from_file(path: str = contacts_book):
                 "Номер телефону": phone
             }
 def test_pull():
-    print ("!yess! тест")
+    print ("!yess!ав")
+    
