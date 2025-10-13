@@ -26,3 +26,4 @@ def load_contacts_from_file(path: str = contacts_book):
             }
 def test_pull():
     print ("!yess!ав")
+    
