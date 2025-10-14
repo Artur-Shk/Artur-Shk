@@ -29,6 +29,31 @@ def load_contacts_from_file(path: str = contacts_book):
                 "Номер телефону": phone
             }
 
+def append_new_contacts_to_file(path: str = contacts_book):
+    """Додає контакти, які ще відсутні у файлі. (уникає дублювання по key)"""
+    existing_contacts = set() # множина для збереження існуючих ключів (ім'я + прізвище)
+    if os.path.exists(path): # якщо файл існує
+        with open(path, "r", encoding="utf-8") as f:
+            for line in f: # читаємо кожен рядок файлу
+                line = line.strip() # видаляємо пробіли та символи переносу рядка
+                if not line:
+                    continue
+                parts_of_line = [p.strip() for p in line.split(",")]
+                if len(parts_of_line) >= 2: # якщо є хоча б ім'я та прізвище
+                    existing_contacts.add(f"{parts_of_line[0]} {parts_of_line[1]}") # додаємо ключ у множину існуючих
+
+    with open(path,"w", encoding="utf-8") as f: # відкриваємо файл на дозапис
+        added_contacts = 0 # лічильник доданих контактів
+        for key, info in Contacts.contacts_list.items(): # проходимо по всіх контактах у словнику
+            if key not in existing_contacts: # якщо контакт ще не існує у файлі
+                # записуємо контакт у файл
+                f.write(f"{info['Ім\'я']},{info['Прізвище']},{info['Електронна пошта']},{info['Номер телефону']}\n")
+                added_contacts += 1 # збільшуємо лічильник доданих контактів
+    print(f"✅ Додано у файл {added} нових контакт(ів).")
+
+
+
+
 
 def delete_contact_from_file_by_name(name: str, path: str = "contacts.txt"):
     """Видаляє всі рядки, де зустрічається ім'я (case-insensitive).
