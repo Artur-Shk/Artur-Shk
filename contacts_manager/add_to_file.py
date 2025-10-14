@@ -50,6 +50,7 @@ def append_new_contacts_to_file(path: str = contacts_book):
                 f.write(f"{info['Ім\'я']},{info['Прізвище']},{info['Електронна пошта']},{info['Номер телефону']}\n")
                 added_contacts += 1 # збільшуємо лічильник доданих контактів
     print(f"✅ Додано у файл {added} нових контакт(ів).")
+    
 
 
 
