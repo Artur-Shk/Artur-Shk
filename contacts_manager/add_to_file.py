@@ -75,7 +75,7 @@ def delete_contact_from_file_by_name(name: str, path: str = "contacts.txt"):
     if deleted_count > 0:
         print(f"🗑️ Видалено {deleted_count} контакт(ів) з ім'ям '{name}'.")
     else:
-        print(f"ℹ️ Контакт з ім'ям '{name}' не знайдено.")
+        print(f"ℹ️ Контакт з ім'ям '{name}' не знайдено.!!!")
 
     return deleted_count
 
