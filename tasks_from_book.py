@@ -2,6 +2,7 @@
 #
 # from pyexpat.errors import messages
 #
+import math
 from math import radians
 seconds_in_minute = 60
 seconds_per_hour = 60 * seconds_in_minute
@@ -75,7 +76,7 @@ print("Секунди: {0:<10.2f}".format(in_seconds))
  дробової і цілої частин використовують крапку.'''
 
 temperature_in_celsius = float(input("Введіть температуру у цельсіях: "))
-temperature_in_fahrenheit = 32 + 9/5 * temperature_in_celsius
+temperature_in_fahrenheit = 32 + 9 / 5 * temperature_in_celsius
 temperature_in_kelvin = temperature_in_celsius + 273.15
 print("Температура у Фаренгейтах: {0:^15.2f}".format(temperature_in_fahrenheit))
 print("Температура у Кельвінах: {0:^15.2f}".format(temperature_in_kelvin))
@@ -83,7 +84,7 @@ print("Температура у Кельвінах: {0:^15.2f}".format(temperat
 '''Виконайте розкладання чотирицифрового цілого числа і виведіть на екран суму цифр у числі. Наприклад, якщо обрали число 6259, 
 то програма повинна вивести на екран повідомлення: 6 + 2 + 5 + 9 = 22. Використайте функцію format() для відображення результату
 або f-рядки.'''
-#рішення 1
+# рішення 1
 user_number = input("Введіть ваше число:")
 count = 0
 for number in user_number:
@@ -92,7 +93,7 @@ for number in user_number:
 
 print(f"Сума цифр числа {user_number}: {'+'.join(str(number) for number in user_number)} = {count}")
 
-#Рішення 2
+# Рішення 2
 user_number = input("Введіть ваше число: ")
 digits = [int(d) for d in user_number if d.isdigit()]
 print(f"{' + '.join(str(d) for d in digits)} = {sum(digits)}")
@@ -101,9 +102,23 @@ x1 = 39.9075000
 y1 = 116.3972300
 x2 = 50.4546600
 y2 = 30.5238000
+R = 6371.032  # Радіус Землі в км
 
 x1_rad = radians(x1)
 y1_rad = radians(y1)
 x2_rad = radians(x2)
 y2_rad = radians(y2)
 
+try:
+    d_part = (math.sin(x1_rad) * math.sin(x2_rad) +
+              math.cos(x1_rad) * math.cos(x2_rad) * math.cos(y1_rad - y2_rad))
+
+    # Обмеження значення d_part діапазоном [-1, 1] через помилки округлення
+    d_part = max(-1.0, min(1.0, d_part))
+
+    d = R * math.acos(d_part)
+
+    print(f"Координати: ({x1}° N, {y1}° E) та ({x2}° N, {y2}° E)")
+    print(f"Обчислена відстань складає {d:.2f} км")
+except ValueError as e:
+    print(f"Помилка обчислення: {e}")

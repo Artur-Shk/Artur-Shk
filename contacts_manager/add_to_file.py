@@ -1,5 +1,5 @@
 import os
-from contacts import Contacts
+from contacts_model import Contacts
 
 contacts_book = "contacts_book.txt"
 def load_contacts_from_file(path: str = contacts_book):
