@@ -18,7 +18,7 @@ class Contacts:
             }
             print(f"Контакт {key} додано")
         else:
-            print(f"Контакт {key} вже існує у вашій телефонній книзі. Будь ласка зміть ім'я")
+            print(f"Контакт {key} вже існує у вашій телефонній книзі. Будь ласка змініть ім'я")
 
     def remove_contact(self):
         key = f"{self.first_name} {self.last_name}"

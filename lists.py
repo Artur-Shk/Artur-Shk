@@ -243,9 +243,26 @@ print(f'Максимальне число списку: {max(numbers)}, міні
 numbers = list(range(2, 21, 2))
 print(len(numbers))
 
-сurrency_units = 'pound', 'dollar', 'euro'
-print(сurrency_units)
-p, d, e = сurrency_units
-print(p)
-print(d)
-print(e)
+'''Дано список з такими елементами: cities = ['Budapest', 'Rome', 'Istanbul', 'Sydney', 'Kyiv', 'Hong Kong']. 
+Сформуйте з елементів списку повідомлення, у якому перед останнім елементом буде вставлено слово and. Наприклад, 
+у нашому випадку, повідомлення буде таким: Budapest, Rome, Istanbul, Sydney, Kyiv and Hong Kong. Програма має працювати з 
+будь-якими списками, довжина яких є 6.'''
+
+cities = ['Budapest', 'Rome', 'Istanbul', 'Sydney', 'Kyiv', 'Hong Kong']
+print(f'{", ".join(cities[0:5])} and {cities[-1]}')
+
+'''Необхідно зчитати рядок з 5 цифр, розділених пропусками, і зберегти кожну цифру у список. 
+Створіть копію списку із впорядкованими елементами у зворотному порядку. Виведіть число, яке утворюється об’єднанням 
+елементів нового списку.'''
+str_with_numbers = "1 2 3 4 5"
+numbers = str_with_numbers.split()
+num_reverse = numbers[::-1]
+result_number_string = "".join(num_reverse)
+
+print(numbers)
+print(num_reverse)
+print(result_number_string)
+print(sum(int(num) for num in numbers))
+
+
+
