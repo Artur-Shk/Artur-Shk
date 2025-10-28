@@ -123,11 +123,3 @@ at_least_two = (football & chess) | (football & dance) | (chess & dance)  # | �
 print(f'{", ".join(football_and_chess)} ходять і на футбол, і на шахи.')
 print(f'{", ".join(only_one)} ходять лише на один гурток.')
 print("Учні, які ходять хоча б на два гуртки:", at_least_two)
-
-
-
-
-
-
-
-
