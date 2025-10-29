@@ -31,7 +31,7 @@ My focus areas:
 - Mobile QA (iOS / Android builds, analytics, logs, network traffic)
 - Risk analysis, documentation, and communication with dev/product
 
-I'm currently expanding into Python-based automation (pytest, API checks, CI flow) to complement my manual QA expertise.
+I'm currently expanding into Python-based automation (pytest, API checks, CI flow) to complement my QA expertise.
 
 ---
 
@@ -75,8 +75,8 @@ I'm currently expanding into Python-based automation (pytest, API checks, CI flo
 ### 📊 Activity & Stats
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Artur-Shk/Artur-Shk/main/profile-summary-card-output/tokyo_night/0-profile-details.svg" height="160" alt="Profile details"/>
-  <img src="https://raw.githubusercontent.com/Artur-Shk/Artur-Shk/main/profile-summary-card-output/tokyo_night/3-stats.svg" height="160" alt="Stats overview"/>
+  <img src="https://raw.githubusercontent.com/Artur-Shk/Artur-Shk/main/profile-summary-card-output/tokyonight/0-profile-details.svg" height="160" alt="Profile details"/>
+  <img src="https://raw.githubusercontent.com/Artur-Shk/Artur-Shk/main/profile-summary-card-output/tokyonight/3-stats.svg" height="160" alt="Stats overview"/>
 </div>
 
 ---
