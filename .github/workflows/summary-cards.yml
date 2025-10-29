@@ -1,0 +1,36 @@
+name: GitHub - Summary Cards
+
+on:
+  # оновлювати картки раз на добу
+  schedule:
+    - cron: "0 0 * * *"
+  # і після кожного пуша в main/master (щоб не чекати добу)
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout self profile repo
+        uses: actions/checkout@v4
+
+      - name: Generate profile summary cards
+        uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: Artur-Shk
+          # доступні теми: default, dracula, solarized, vue, tokyo_night, etc.
+          # ми лишаємо токіо-найт, щоб збігалось з усім README
+          THEME: tokyo_night
+
+      - name: Commit & push cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile-summary-card-output
+          git commit -m "chore: update summary cards" || echo "no changes"
+          git push
