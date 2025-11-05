@@ -79,68 +79,236 @@
 # for item in readout:
 #     print(item)
 
-'''Використайте функцію zip(), щоб створити словник movies, який об’єднує у пари списки: seasons = ['summer', 'autumn'] і 
-months = [ 'july', 'november']. Виведіть вміст словника.'''
+# '''Використайте функцію zip(), щоб створити словник movies, який об’єднує у пари списки: seasons = ['summer', 'autumn'] і
+# months = [ 'july', 'november']. Виведіть вміст словника.'''
+# from my_string import user_country
+#
+# seasons = ['summer', 'autumn']
+# months = [ 'july', 'november']
+# movies = dict(zip(seasons, months))
+# print(movies)
+#
+# '''Використайте відомі вам структури коду для виведення ключів і значень словника activity = {'business': 'manager',
+# 'it': 'software developer', 'science': 'scientist'} у вигляді, на зразок «категорія: професія».'''
+#
+# activity = {'business': 'manager', 'it': 'software developer', 'science': 'scientist'}
+# for key, value in activity.items():
+#     print(f' Категорія - {key}, професія - {value}')
+#
+# '''Використайте включення списку, щоб створити список, який містить парні числа у діапазоні range(12).'''
+#
+# even_numbers = [num for num in range(12) if num % 2 == 0]
+# print(even_numbers)
+#
+# '''Використайте включення словника, щоб створити словник squares з ключами у вигляді цілих чисел з діапазону range(1, 11).
+# Значення словника формуються піднесенням ключів до другого степеня.'''
+# squares = {num: num ** 2 for num in range(1, 11)}
+# for key, value in squares.items():
+#     print(f"{key}² = {value}")
+#
+# '''Використайте цикл for для виведення чисел від 1 до 15 включно, в один рядок і пропусками між ними.'''
+# for num in range(1, 16):
+#     print(num, end=' ')
+# print()
+#
+# '''Створіть список чисел від 1 до 1 000 000. Скористайтеся функціями min() і max() та переконайтеся у тому, що список дійсно
+# починається 1 і закінчується 1 000 000. Викличте функцію sum() і подивіться, наскільки швидко Python зможе підсумувати мільйон чисел.'''
+#
+# numbers = range(1, 1000001)
+# print(f'Мінімальне число списку - {min(numbers)}!\nМаксимальне число списку - {max(numbers)}!\nСума усіх чисел списку = {sum(numbers)}!')
+#
+# '''Cкористайтеся третім аргументом функції range() для створення списку непарних чисел від 1 до 25 і виведіть усі числа в
+# окремих рядках у циклі for.'''
+#
+# odd_numbers = range(1, 25, 2)
+# for num in odd_numbers:
+#     print(num, end=' ')
+# print()
+#
+# '''Створіть список перших 10 кубів (тобто кубів усіх цілих чисел від 1 до 10) і виведіть значення усіх кубів у циклі for
+# в один рядок з пропусками.'''
+# cubed_numbers =[num**3 for num in range(1, 11)]
+# for num in cubed_numbers:
+#     print(num, end=' ')
+#
+# '''Cтворіть список чисел у діапазоні від 3 до 60 і виведіть усі числа списку у циклі while в окремих рядках.'''
+#
+# num = 3
+# while num <= 60:
+#     print(num)
+#     num += 1
+#
+# '''Визначте функцію trees, яка повертає список ['poplar', 'willow', 'lime']. Викличте функцію.'''
+# def trees():
+#     types_of_trees = ['poplar', 'willow', 'lime']
+#     return types_of_trees
+#
+# result = trees()
+# print(result)
+#
+# '''Напишіть функцію favorite_book(), яка отримує один параметр title. Функція повинна виводити повідомлення, на зразок One of my
+# favorite books is "The Lord of the Rings".. Викличте функцію і переконайтеся у тому, що назва книги правильно передається як аргумент
+#  при виконанні функції.'''
+# def favorite_book(title):
+#     print(f'Одна з моїх улюблених книг -  {title}!')
+#
+# favorite_book("Кобзар")
+#
+# '''Напишіть функцію make_shirt(), яка отримує розмір футболки і текст, який повинен бути надрукований на ній. Функція повинна
+# виводити повідомлення з розміром і текстом. Викличте функцію з використанням позиційних аргументів. Викличте функцію вдруге з
+# використанням іменованих аргументів. Змініть функцію make_shirt(), щоб футболки за замовчуванням мали розмір XL, і на них виводився
+# текст I love Python!. Створіть футболку з розміром XL і текстом за замовчуванням.'''
+# def make_shirt(size, text):
+#     print(f'Замовлення: футболка, розмір - {size}, текст принта - {text}')
+#
+# make_shirt("M", "I love Python!")
+# make_shirt(text="I love Python!", size="S")
+#
+# def make_shirt_1(size = "XL", text = "I love Python!"):
+#     print(f'Замовлення: футболка, розмір - {size}, текст принта - {text}')
+#
+# make_shirt_1()
 
-seasons = ['summer', 'autumn']
-months = [ 'july', 'november']
-movies = dict(zip(seasons, months))
-print(movies)
+# '''Напишіть функцію city_country(), яка отримує назву міста і країну.
+# Функція повинна повертати рядок у форматі Kyiv, Ukraine. Викличте функцію як мінімум для трьох пар «місто-країна».'''
+# def city_country(city, country):
+#     return f"{city}, {country}"
+#
+# print(city_country("Kyiv", "Ukraine"))
+# print(city_country("Tokyo", "Japan"))
+# print(city_country("Paris", "France"))
+#
+# '''При введенні числових даних часто зустрічається типова проблема: користувач вводить текст замість чисел. При спробі перетворити
+# дані в int генерується виняток TypeError. Напишіть функцію, яка приймає два числа, шукає їх суму і виводить результат. Перехопіть
+# виняток TypeError, якщо будь-яке із вхідних значень не є числом, і виведіть зручне повідомлення про помилку. Протестуйте функцію:
+# спочатку введіть два числа, а потім введіть текст замість одного з чисел.'''
+#
+# def summ():
+#     try:
+#         num_1 = int(input("Введіть перше число: "))
+#         num_2 = int(input("Введіть друге число: "))
+#         result = num_1 + num_2
+#         print(f"Сума чисел: {result}")
+#     except TypeError:
+#         print("Помилка: введено не число! Спробуйте ще раз.")
+#
+# summ()
+#
+# def summ():
+#     while True:
+#         try:
+#             num_1 = int(input("Введіть перше число: "))
+#             num_2 = int(input("Введіть друге число: "))
+#             result = num_1 + num_2
+#         except ValueError:
+#             print("Помилка: введено не число! Спробуйте ще раз.\n")
+#             continue
+#         else:
+#             print(f"Сума чисел: {result}")
+#             break
+#
+# summ()
+#
+# '''Виведіть вітальне повідомлення для кожного користувача після його входу на сайт. Cтворіть список з кількох імен користувачів,
+# включаючи ім’я 'Admin'. Перебираючи елементи списку, виведіть повідомлення для кожного користувача. Для користувача з ім’ям 'Admin'
+# виведіть особливе повідомлення - наприклад: Hello Admin, I hope you’re well.. У інших випадках виводиться універсальне привітання -
+# наприклад: Hello Alex, thank you for logging in again.. Додайте команду if, яка перевірить, що список користувачів не порожній.
+# Якщо список порожній, виведіть повідомлення: We need to find some users!. Видаліть зі списку всі імена користувачів і переконайтеся
+# у тому, що програма виводить правильне повідомлення.'''
 
-'''Використайте відомі вам структури коду для виведення ключів і значень словника activity = {'business': 'manager', 
-'it': 'software developer', 'science': 'scientist'} у вигляді, на зразок «категорія: професія».'''
+# users_names = ['Artur', 'Pavlo', 'Alex', 'Admin']
+# if not users_names:
+#     print('We need to find some users!')
+# else:
+#     name = input('What is your name? ').strip().title()
+#
+#     if name not in users_names:
+#         print(f'User {name} not found in the list!')
+#     elif name == 'Admin':
+#         print('Hello Admin, I hope you’re well.')
+#     else:
+#         print(f'Hello {name}, thank you for logging in again.')
 
-activity = {'business': 'manager', 'it': 'software developer', 'science': 'scientist'}
-for key, value in activity.items():
-    print(f' Категорія - {key}, професія - {value}')
+# '''Визначте назву геометричної фігури за введеною кількістю її сторін. Програма повинна підтримувати фігури від 3 до 6 сторін. Якщо введена кількість
+# сторін поза межами цього діапазону, програма повинна відображати відповідне повідомлення.'''
+#
+# number_of_sides = {3: 'трикутник',
+#                    4: 'чотирикутник',
+#                    5: 'пʼятикутник',
+#                    6: 'шестикутник'}
+# while True:
+#     try:
+#         users_number = int(input("Введіть кількість сторін фігури: "))
+#     except ValueError:
+#         print("Помилка: введено не число! Спробуйте ще раз.\n")
+#         continue
+#     if users_number not in number_of_sides:
+#         print(f'Фігура з такою кількістю сторін відсутня!')
+#         continue
+#     else:
+#             print(f' Ваша фігура - {number_of_sides[users_number]}')
+#             break
 
-'''Використайте включення списку, щоб створити список, який містить парні числа у діапазоні range(12).'''
+'''Порядкові числівники у англійській мові закінчуються суфіксом th (окрім 1st, 2nd і 3rd). Cтворіть список чисел від 1 до 9. 
+Використайте ланцюжок if-elif-else у циклі для виведення правильного закінчення числівника для кожного числа. Програма повинна виводити 
+числівники 1st 2nd 3rd 4th 5th 6th 7th 8th 9th, кожен у новому рядку.'''
 
-even_numbers = [num for num in range(12) if num % 2 == 0]
-print(even_numbers)
 
-'''Використайте включення словника, щоб створити словник squares з ключами у вигляді цілих чисел з діапазону range(1, 11). 
-Значення словника формуються піднесенням ключів до другого степеня.'''
-squares = {num: num ** 2 for num in range(1, 11)}
-for key, value in squares.items():
-    print(f"{key}² = {value}")
+digits = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+for i in digits:
+    if i == 1:
+        print(f'{i}st')
+    elif i == 2:
+        print(f'{i}nd')
+    elif i == 3:
+        print(f'{i}rd')
+    else:
+        print(f'{i}th')
 
-'''Використайте цикл for для виведення чисел від 1 до 15 включно, в один рядок і пропусками між ними.'''
-for num in range(1, 16):
-    print(num, end=' ')
-print()
+'''Зчитайте ціле число введене користувачем і виведіть повідомлення про те, чи число парне або непарне.'''
 
-'''Створіть список чисел від 1 до 1 000 000. Скористайтеся функціями min() і max() та переконайтеся у тому, що список дійсно 
-починається 1 і закінчується 1 000 000. Викличте функцію sum() і подивіться, наскільки швидко Python зможе підсумувати мільйон чисел.'''
+while True:
+    try:
+        user_number = int(input("Введіть бажане число: "))
+    except ValueError:
+        print("Помилка: введено не число! Спробуйте ще раз.\n")
+        continue
+    if user_number % 2 == 0:
+        print(f'Число {user_number} - парне!')
+    else:
+        print(f'Число {user_number} - непарне!')
+    break
 
-numbers = range(1, 1000001)
-print(f'Мінімальне число списку - {min(numbers)}!\nМаксимальне число списку - {max(numbers)}!\nСума усіх чисел списку = {sum(numbers)}!')
+'''Зчитайте назву місяця від користувача як рядок і виведіть кількість днів у вказаному місяці. 
+Врахувати те, що «February» може мати 28 або 29 днів.'''
 
-'''Cкористайтеся третім аргументом функції range() для створення списку непарних чисел від 1 до 25 і виведіть усі числа в 
-окремих рядках у циклі for.'''
+month = input("Введіть назву місяця (англійською): ").strip().title()
 
-odd_numbers = range(1, 25, 2)
-for num in odd_numbers:
-    print(num, end=' ')
-print()
+days_in_month = {
+    "January": 31,
+    "March": 31,
+    "May": 31,
+    "July": 31,
+    "August": 31,
+    "October": 31,
+    "December": 31,
+    "April": 30,
+    "June": 30,
+    "September": 30,
+    "November": 30
+}
 
-'''Створіть список перших 10 кубів (тобто кубів усіх цілих чисел від 1 до 10) і виведіть значення усіх кубів у циклі for 
-в один рядок з пропусками.'''
-cubed_numbers =[num**3 for num in range(1, 11)]
-for num in cubed_numbers:
-    print(num, end=' ')
+if month in days_in_month:
+    print(f"{days_in_month[month]} днів")
+elif month == "February":
+    leap_year = input("Чи є рік високосним? (yes/no): ").strip().lower()
+    if leap_year == "yes":
+        print("29 днів")
+    else:
+        print("28 днів")
+else:
+    print("Невідома назва місяця!")
 
-'''Cтворіть список чисел у діапазоні від 3 до 60 і виведіть усі числа списку у циклі while в окремих рядках.'''
-
-num = 3
-while num <= 60:
-    print(num)
-    num += 1
-
-'''Визначте функцію trees, яка повертає список ['poplar', 'willow', 'lime']. Викличте функцію.'''
-def trees():
-    types_of_trees = ['poplar', 'willow', 'lime']
-    return types_of_trees
-
-result = trees()
-print(result)
+'''Потрібно визначити, чи є даний рік високосним. Нагадаємо, що високосними роками вважаються ті роки, порядковий номер яких або кратний 4, а
+ле при цьому не кратний 100, або кратний 400 (наприклад, 2000-й рік був високосним, а 2100-й буде невисокосним роком). Програма повинна коректно 
+працювати на числах від 1900 до 3000 років. Виведіть Leap year. у разі, якщо рік є високосним і Ordinary year. у протилежному випадку.'''
