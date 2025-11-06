@@ -367,4 +367,4 @@ while True:
 def calkulator():
     first_number = int(input("Введіть перше число: "))
     second_number = int(input("Введіть друге число: "))
-    
+d
