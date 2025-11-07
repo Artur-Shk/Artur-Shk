@@ -1,6 +1,5 @@
 from cffi.cffi_opcode import PRIM_INT16
 
-from tasks_from_book import user_number
 
 # '''Напишіть код, який виводить різні повідомлення, в залежності від значення, що зберігається у змінній weather_forecast:
 # What a beautiful day!, якщо значення змінної дорівнює sun, Take an umbrella!, якщо значення змінної дорівнює rain і The sun’s
@@ -379,8 +378,33 @@ while True:
 Наприклад, якщо користувач вводить a і 1, то програма повинна повідомити, що квадрат має колір black, якщо d і 5 - програма повідомляє, 
 що квадрат має колір white.'''
 
-user_letter = input("Введіть літеру клітинки: ").strip().strip()
-user_number = input("Введіть число клітинки: ")
 letters = ("a", "b", "c", "d", "e", "f", "g", "h")
-if not user_letter in letters:
-    print()
+numbers = (1, 2, 3, 4, 5, 6, 7, 8)
+while True:
+
+    user_letter = input("Введіть літеру клітинки: ").strip().lower()
+    if  user_letter not in letters:
+        print(f'На шахматній дошці присутні літери від a до h включно, введіть одну з них!')
+        continue
+    break
+while True:
+    try:
+        user_number = int(input("Введіть число клітинки: "))
+        if user_number not in numbers:
+            print(f'На шахматній дошці присутні цифри від 1 до 8 включно, введіть одну з них!')
+            continue
+    except ValueError:
+        print("Введіть саме цифру від 1 до 8 включно!")
+        continue
+    column = ord(user_letter) - ord('a') + 1
+    if (user_number + column) % 2 == 0:
+        print(f'Колір обраної вами клітинки чорний!')
+    else:
+        print(f'Колір обраної вами клітинки білий!')
+
+    break
+
+
+
+
+
