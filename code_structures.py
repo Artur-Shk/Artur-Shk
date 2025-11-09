@@ -441,35 +441,147 @@ import re
 #         print(f"{i * j:5}", end="")
 #     print()
 
-'''Як відомо, День програміста припадає на 256 день року, у невисокосний рік це 13 вересня, а у високосний - 12. 
-Дізнайтеся число і номер місяця, що припадають на день, за номером n, який вводиться користувачем, у невисокосному 2017 році.'''
+# '''Як відомо, День програміста припадає на 256 день року, у невисокосний рік це 13 вересня, а у високосний - 12.
+# Дізнайтеся число і номер місяця, що припадають на день, за номером n, який вводиться користувачем, у невисокосному 2017 році.'''
+#
+# months_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+# months = ["січня", "лютого", "березня", "квітня", "травня", "червня", "липня", "серпня", "вересня", "жовтня", "листопада", "грудня"]
+# while True:
+#
+#     try:
+#         user_day = int(input("Введіть номер дня: "))
+#     except ValueError:
+#         print("Введіть номер дня цифрами!")
+#         continue
+#
+#     if not 1 <= user_day <= 365:
+#         print("Введіть число в діапазоні від 1 до 365 включно!")
+#         continue
+#
+#     month_index = 0
+#     for days_in_month in months_days:
+#         if user_day > days_in_month:
+#             user_day -= days_in_month  # Відкидаємо дні пройденого місяця
+#             month_index += 1  # Переходимо до наступного місяця
+#         else:
+#             break
+#
+#     print(f'Ваша дата: {user_day} {months[month_index]}')
+#
+#     break
+#
+# '''Конвертуйте десяткове число (з основою 10) у бінарне (двійкове, з основою 2). Користувач вводить десяткове число як ціле, а потім використовується
+# алгоритм поділу (псевдокод), показаний нижче, щоб виконати перетворення. Коли алгоритм завершується, результат містить двійкове подання числа. Програма
+# має вивести відповідне повідомлення, на зразок: 2018 in Decimal is 11111100010 in Binary. Модифікуйте програму таким чином, щоб вона виконувала
+# зворотну операцію: перетворювала двійкове чиcло у десяткове.'''
+#
+# while True:
+#     try:
+#         decimal_number = int(input("Введіть десяткове число: "))
+#     except ValueError:
+#         print("Введіть ціле число!")
+#         continue
+#
+#     original_decimal = decimal_number
+#     binary_result = ""
+#
+#     if decimal_number == 0:
+#         binary_result = "0"
+#     else:
+#         while decimal_number > 0:
+#             remainder = decimal_number % 2
+#             binary_result = str(remainder) + binary_result
+#             decimal_number //= 2
+#
+#     print(f"{original_decimal} в десятковій системі це {binary_result} у двійковій")
+#     break
+#
+#
+# while True:
+#     binary_number = input("Введіть двійкове число: ").strip()
+#     if all(char in "01" for char in binary_number):
+#         break
+#     print("Дозволені лише цифри 0 і 1!")
+#
+# original_binary = binary_number
+# decimal_result = 0
+#
+# for bit_char in binary_number:
+#     decimal_result = decimal_result * 2 + int(bit_char)
+#
+# print(f"{original_binary} в бінарній системі це {decimal_result} в десятковій.")
 
-months_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-months = ["січня", "лютого", "березня", "квітня", "травня", "червня", "липня", "серпня", "вересня", "жовтня", "листопада", "грудня"]
+'''Реалізуйте шифр Цезаря. Один з перших відомих прикладів шифрування був використаний Юлієм Цезарем. Цезар надавав письмові вказівки своїм генералам, але він не бажав, зрозуміло, щоб про них 
+знали вороги. У результаті він створив власне шифрування, що згодом стало відоме як шифр Цезаря. Ідея цього шифру проста (і, як наслідок, вона не забезпечує серйозного захисту). Кожна буква в 
+оригінальному повідомленні зміщується на 3 позиції. В результаті A стає D, B стає E, C стає F, D стає G і т. д. Останні три букви у алфавіті повертаються до початку: X стає A, Y стає B, а Z стає 
+C. Нелітерні символи не враховуються шифром. Користувач вводить з клавітури повідомлення та зсув, а потім програма відображає зашифроване повідомлення. Переконайтеся, що програма шифрує як 
+великі та малі літери. Програма також повинна підтримувати значення негативних зсувів, щоб її можна було використовувати як для кодування повідомлень, так і для декодування повідомлень. У 
+нагоді стануть такі функції: ord() (перетворює символ у номер позиції цього символу у таблиці ASCII ) і chr() (перетворює номер позиції символу у таблиці ASCII у відповідний символ).'''
+
+pattern = re.compile(r'^[A-Za-zА-Яа-яІіЇїЄєҐґ]$')  # Перевіряємо кожен символ, а не рядок
+# --- Шифрування ---
 while True:
-
+    message = input('Введіть ваше повідомлення: ').strip()
+    if message.strip() == "":
+        print("Повідомлення не може бути порожнім або складатися лише з пробілів!")
+        continue
     try:
-        user_day = int(input("Введіть номер дня: "))
+        letter_shift = int(input("Введіть бажане число зсуву: "))
     except ValueError:
-        print("Введіть номер дня цифрами!")
+        print("Введіть саме ціле число!")
         continue
 
-    if not 1 <= user_day <= 365:
-        print("Введіть число в діапазоні від 1 до 365 включно!")
-        continue
+    result = ""
 
-    month_index = 0
-    for days_in_month in months_days:
-        if user_day > days_in_month:
-            user_day -= days_in_month  # Відкидаємо дні пройденого місяця
-            month_index += 1  # Переходимо до наступного місяця
+    for char in message:
+        if pattern.fullmatch(char):
+            if 'A' <= char <= 'Z':
+                encrypted_char = chr((ord(char) - ord('A') + letter_shift) % 26 + ord('A'))
+            elif 'a' <= char <= 'z':
+                encrypted_char = chr((ord(char) - ord('a') + letter_shift) % 26 + ord('a'))
+            elif 'А' <= char <= 'Я':
+                encrypted_char = chr((ord(char) - ord('А') + letter_shift) % 33 + ord('А'))
+            elif 'а' <= char <= 'я':
+                encrypted_char = chr((ord(char) - ord('а') + letter_shift) % 33 + ord('а'))
         else:
-            break
+            encrypted_char = char
+        result += encrypted_char
 
-    print(f'Ваша дата: {user_day} {months[month_index]}')
-
+    print("Зашифровано:", result)
     break
 
+
+# --- Розшифрування ---
+while True:
+    message = input('Введіть отримане повідомлення: ').strip()
+    if message.strip() == "":
+        print("Повідомлення не може бути порожнім або складатися лише з пробілів!")
+        continue
+    try:
+        letter_shift = int(input("Введіть необхідне число зсуву: "))
+    except ValueError:
+        print("Введіть саме ціле число!")
+        continue
+
+    result = ""
+
+    for char in message:
+        if pattern.fullmatch(char):
+            if 'A' <= char <= 'Z':
+                decrypted_char = chr((ord(char) - ord('A') - letter_shift) % 26 + ord('A'))
+            elif 'a' <= char <= 'z':
+                decrypted_char = chr((ord(char) - ord('a') - letter_shift) % 26 + ord('a'))
+            elif 'А' <= char <= 'Я':
+                decrypted_char = chr((ord(char) - ord('А') - letter_shift) % 33 + ord('А'))
+            elif 'а' <= char <= 'я':
+                decrypted_char = chr((ord(char) - ord('а') - letter_shift) % 33 + ord('а'))
+        else:
+            decrypted_char = char
+
+        result += decrypted_char
+
+    print("Розшифровано:", result)
+    break
 
 
 
