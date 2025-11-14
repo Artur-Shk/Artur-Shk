@@ -1,5 +1,10 @@
+from turtledemo.sorting_animate import randomize
+
 from cffi.cffi_opcode import PRIM_INT16
 import re
+import secrets
+import random
+
 
 
 # '''Напишіть код, який виводить різні повідомлення, в залежності від значення, що зберігається у змінній weather_forecast:
@@ -510,79 +515,118 @@ import re
 #     decimal_result = decimal_result * 2 + int(bit_char)
 #
 # print(f"{original_binary} в бінарній системі це {decimal_result} в десятковій.")
+#
+# '''Реалізуйте шифр Цезаря. Один з перших відомих прикладів шифрування був використаний Юлієм Цезарем. Цезар надавав письмові вказівки своїм генералам, але він не бажав, зрозуміло, щоб про них
+# знали вороги. У результаті він створив власне шифрування, що згодом стало відоме як шифр Цезаря. Ідея цього шифру проста (і, як наслідок, вона не забезпечує серйозного захисту). Кожна буква в
+# оригінальному повідомленні зміщується на 3 позиції. В результаті A стає D, B стає E, C стає F, D стає G і т. д. Останні три букви у алфавіті повертаються до початку: X стає A, Y стає B, а Z стає
+# C. Нелітерні символи не враховуються шифром. Користувач вводить з клавітури повідомлення та зсув, а потім програма відображає зашифроване повідомлення. Переконайтеся, що програма шифрує як
+# великі та малі літери. Програма також повинна підтримувати значення негативних зсувів, щоб її можна було використовувати як для кодування повідомлень, так і для декодування повідомлень. У
+# нагоді стануть такі функції: ord() (перетворює символ у номер позиції цього символу у таблиці ASCII ) і chr() (перетворює номер позиції символу у таблиці ASCII у відповідний символ).'''
+#
+# pattern = re.compile(r'^[A-Za-zА-Яа-яІіЇїЄєҐґ]$')  # Перевіряємо кожен символ, а не рядок
+# # --- Шифрування ---
+# while True:
+#     message = input('Введіть ваше повідомлення: ').strip()
+#     if message.strip() == "":
+#         print("Повідомлення не може бути порожнім або складатися лише з пробілів!")
+#         continue
+#     try:
+#         letter_shift = int(input("Введіть бажане число зсуву: "))
+#     except ValueError:
+#         print("Введіть саме ціле число!")
+#         continue
+#
+#     result = ""
+#
+#     for char in message:
+#         if pattern.fullmatch(char):
+#             if 'A' <= char <= 'Z':
+#                 encrypted_char = chr((ord(char) - ord('A') + letter_shift) % 26 + ord('A'))
+#             elif 'a' <= char <= 'z':
+#                 encrypted_char = chr((ord(char) - ord('a') + letter_shift) % 26 + ord('a'))
+#             elif 'А' <= char <= 'Я':
+#                 encrypted_char = chr((ord(char) - ord('А') + letter_shift) % 33 + ord('А'))
+#             elif 'а' <= char <= 'я':
+#                 encrypted_char = chr((ord(char) - ord('а') + letter_shift) % 33 + ord('а'))
+#         else:
+#             encrypted_char = char
+#         result += encrypted_char
+#
+#     print("Зашифровано:", result)
+#     break
+#
+#
+# # --- Розшифрування ---
+# while True:
+#     message = input('Введіть отримане повідомлення: ').strip()
+#     if message.strip() == "":
+#         print("Повідомлення не може бути порожнім або складатися лише з пробілів!")
+#         continue
+#     try:
+#         letter_shift = int(input("Введіть необхідне число зсуву: "))
+#     except ValueError:
+#         print("Введіть саме ціле число!")
+#         continue
+#
+#     result = ""
+#
+#     for char in message:
+#         if pattern.fullmatch(char):
+#             if 'A' <= char <= 'Z':
+#                 decrypted_char = chr((ord(char) - ord('A') - letter_shift) % 26 + ord('A'))
+#             elif 'a' <= char <= 'z':
+#                 decrypted_char = chr((ord(char) - ord('a') - letter_shift) % 26 + ord('a'))
+#             elif 'А' <= char <= 'Я':
+#                 decrypted_char = chr((ord(char) - ord('А') - letter_shift) % 33 + ord('А'))
+#             elif 'а' <= char <= 'я':
+#                 decrypted_char = chr((ord(char) - ord('а') - letter_shift) % 33 + ord('а'))
+#         else:
+#             decrypted_char = char
+#
+#         result += decrypted_char
+#
+#     print("Розшифровано:", result)
+#     break
 
-'''Реалізуйте шифр Цезаря. Один з перших відомих прикладів шифрування був використаний Юлієм Цезарем. Цезар надавав письмові вказівки своїм генералам, але він не бажав, зрозуміло, щоб про них 
-знали вороги. У результаті він створив власне шифрування, що згодом стало відоме як шифр Цезаря. Ідея цього шифру проста (і, як наслідок, вона не забезпечує серйозного захисту). Кожна буква в 
-оригінальному повідомленні зміщується на 3 позиції. В результаті A стає D, B стає E, C стає F, D стає G і т. д. Останні три букви у алфавіті повертаються до початку: X стає A, Y стає B, а Z стає 
-C. Нелітерні символи не враховуються шифром. Користувач вводить з клавітури повідомлення та зсув, а потім програма відображає зашифроване повідомлення. Переконайтеся, що програма шифрує як 
-великі та малі літери. Програма також повинна підтримувати значення негативних зсувів, щоб її можна було використовувати як для кодування повідомлень, так і для декодування повідомлень. У 
-нагоді стануть такі функції: ord() (перетворює символ у номер позиції цього символу у таблиці ASCII ) і chr() (перетворює номер позиції символу у таблиці ASCII у відповідний символ).'''
+'''У програмі визначте функцію, яка генерує випадковий пароль. Пароль має бути довільної довжини від 7 до 10 символів. Кожен символ паролю 
+повинен бути випадково обраним з позицій 33 до 126 з таблиці кодів ASCII . Функція повертає випадково сформований пароль як єдиний її результат 
+і він виводиться в основній програмі. Скористайтеся вказівками з попередньої задачі.'''
 
-pattern = re.compile(r'^[A-Za-zА-Яа-яІіЇїЄєҐґ]$')  # Перевіряємо кожен символ, а не рядок
-# --- Шифрування ---
-while True:
-    message = input('Введіть ваше повідомлення: ').strip()
-    if message.strip() == "":
-        print("Повідомлення не може бути порожнім або складатися лише з пробілів!")
-        continue
+
+def password():
+    length = secrets.choice(range(7, 11))
+    allowed_chars = [chr(i) for i in range(33, 127)]
+    password = ''.join(secrets.choice(allowed_chars) for _ in range(length))
+    return password
+
+
+if __name__ == '__main__':
+    pwd = password()
+    print("Згенерований пароль:", pwd)
+
+'''Напишіть програму, у якій комп’ютер генерує випадкове число, а користувач повинен вгадати число, вводячи його з клавіатури за вказану кількість 
+спроб.'''
+
+random_number = random.randint(1, 10)
+counter = 5
+print("Спробуйте вгадати число від 1 до 10. У вас є 5 спроб!")
+
+while counter > 0:
     try:
-        letter_shift = int(input("Введіть бажане число зсуву: "))
+        user_number = int(input("Введіть число: "))
+        if not 1 <= user_number <= 10:
+            print("Ваше число не відповідає заданому діапазону!")
+            continue
     except ValueError:
-        print("Введіть саме ціле число!")
+        print("Ви ввели заборонений символ, введіть саме ціле число!")
         continue
-
-    result = ""
-
-    for char in message:
-        if pattern.fullmatch(char):
-            if 'A' <= char <= 'Z':
-                encrypted_char = chr((ord(char) - ord('A') + letter_shift) % 26 + ord('A'))
-            elif 'a' <= char <= 'z':
-                encrypted_char = chr((ord(char) - ord('a') + letter_shift) % 26 + ord('a'))
-            elif 'А' <= char <= 'Я':
-                encrypted_char = chr((ord(char) - ord('А') + letter_shift) % 33 + ord('А'))
-            elif 'а' <= char <= 'я':
-                encrypted_char = chr((ord(char) - ord('а') + letter_shift) % 33 + ord('а'))
+    counter -= 1
+    if user_number == random_number:
+        print(f"Вау!!! Ви вгадали, я дійсно загадав число {random_number}.")
+        break
+    else:
+        if counter > 0:
+            print(f"Нажаль, ви не вгадали. Залишилось {counter} спроб.")
         else:
-            encrypted_char = char
-        result += encrypted_char
-
-    print("Зашифровано:", result)
-    break
-
-
-# --- Розшифрування ---
-while True:
-    message = input('Введіть отримане повідомлення: ').strip()
-    if message.strip() == "":
-        print("Повідомлення не може бути порожнім або складатися лише з пробілів!")
-        continue
-    try:
-        letter_shift = int(input("Введіть необхідне число зсуву: "))
-    except ValueError:
-        print("Введіть саме ціле число!")
-        continue
-
-    result = ""
-
-    for char in message:
-        if pattern.fullmatch(char):
-            if 'A' <= char <= 'Z':
-                decrypted_char = chr((ord(char) - ord('A') - letter_shift) % 26 + ord('A'))
-            elif 'a' <= char <= 'z':
-                decrypted_char = chr((ord(char) - ord('a') - letter_shift) % 26 + ord('a'))
-            elif 'А' <= char <= 'Я':
-                decrypted_char = chr((ord(char) - ord('А') - letter_shift) % 33 + ord('А'))
-            elif 'а' <= char <= 'я':
-                decrypted_char = chr((ord(char) - ord('а') - letter_shift) % 33 + ord('а'))
-        else:
-            decrypted_char = char
-
-        result += decrypted_char
-
-    print("Розшифровано:", result)
-    break
-
-
-
+            print(f"Ви програли. Я загадав число {random_number}.")
 
