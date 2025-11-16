@@ -410,9 +410,9 @@ import random
 #
 #     break
 
-'''Чи є рядок «паліндромом»? Рядок є паліндромом, якщо він однаково читається зліва направо та справа наліво. Наприклад, слова Level, Noon, Anna є "
- "паліндромами, незалежно від регістру літер. Рядки, які треба перевірити, вводяться користувачем. Введення даних можна перервати, якщо ввести слово "
- "escape. Програма повинна вивести результат перевірки у вигляді повідомлення наприклад: is a palindrome або is not a palindrome.)'''
+# '''Чи є рядок «паліндромом»? Рядок є паліндромом, якщо він однаково читається зліва направо та справа наліво. Наприклад, слова Level, Noon, Anna є "
+#  "паліндромами, незалежно від регістру літер. Рядки, які треба перевірити, вводяться користувачем. Введення даних можна перервати, якщо ввести слово "
+#  "escape. Програма повинна вивести результат перевірки у вигляді повідомлення наприклад: is a palindrome або is not a palindrome.)'''
 
 # pattern = re.compile(r'^[A-Za-zА-Яа-яІіЇїЄєҐґ]+$')
 # while True:
@@ -588,45 +588,99 @@ import random
 #     print("Розшифровано:", result)
 #     break
 
-'''У програмі визначте функцію, яка генерує випадковий пароль. Пароль має бути довільної довжини від 7 до 10 символів. Кожен символ паролю 
-повинен бути випадково обраним з позицій 33 до 126 з таблиці кодів ASCII . Функція повертає випадково сформований пароль як єдиний її результат 
-і він виводиться в основній програмі. Скористайтеся вказівками з попередньої задачі.'''
+# '''У програмі визначте функцію, яка генерує випадковий пароль. Пароль має бути довільної довжини від 7 до 10 символів. Кожен символ паролю
+# повинен бути випадково обраним з позицій 33 до 126 з таблиці кодів ASCII . Функція повертає випадково сформований пароль як єдиний її результат
+# і він виводиться в основній програмі. Скористайтеся вказівками з попередньої задачі.'''
+#
+#
+# def password():
+#     length = secrets.choice(range(7, 11))
+#     allowed_chars = [chr(i) for i in range(33, 127)]
+#     password = ''.join(secrets.choice(allowed_chars) for _ in range(length))
+#     return password
+#
+#
+# if __name__ == '__main__':
+#     pwd = password()
+#     print("Згенерований пароль:", pwd)
+#
+# '''Напишіть програму, у якій комп’ютер генерує випадкове число, а користувач повинен вгадати число, вводячи його з клавіатури за вказану кількість
+# спроб.'''
+#
+# random_number = random.randint(1, 10)
+# counter = 5
+# print("Спробуйте вгадати число від 1 до 10. У вас є 5 спроб!")
+#
+# while counter > 0:
+#     try:
+#         user_number = int(input("Введіть число: "))
+#         if not 1 <= user_number <= 10:
+#             print("Ваше число не відповідає заданому діапазону!")
+#             continue
+#     except ValueError:
+#         print("Ви ввели заборонений символ, введіть саме ціле число!")
+#         continue
+#     counter -= 1
+#     if user_number == random_number:
+#         print(f"Вау!!! Ви вгадали, я дійсно загадав число {random_number}.")
+#         break
+#     else:
+#         if counter > 0:
+#             print(f"Нажаль, ви не вгадали. Залишилось {counter} спроб.")
+#         else:
+#             print(f"Ви програли. Я загадав число {random_number}.")
+#
+# Створіть програму за мотивами відомої гри «Камінь, Ножиці, Папір». Застосуйте функціональний підхід при написанні коду програми.
 
+import random
 
-def password():
-    length = secrets.choice(range(7, 11))
-    allowed_chars = [chr(i) for i in range(33, 127)]
-    password = ''.join(secrets.choice(allowed_chars) for _ in range(length))
-    return password
+options = ["Камінь", "Ножиці", "Папір"]
 
-
-if __name__ == '__main__':
-    pwd = password()
-    print("Згенерований пароль:", pwd)
-
-'''Напишіть програму, у якій комп’ютер генерує випадкове число, а користувач повинен вгадати число, вводячи його з клавіатури за вказану кількість 
-спроб.'''
-
-random_number = random.randint(1, 10)
-counter = 5
-print("Спробуйте вгадати число від 1 до 10. У вас є 5 спроб!")
-
-while counter > 0:
-    try:
-        user_number = int(input("Введіть число: "))
-        if not 1 <= user_number <= 10:
-            print("Ваше число не відповідає заданому діапазону!")
+def get_user_choice():
+    while True:
+        user_choice = input('Введіть "Камінь", "Ножиці" чи "Папір": ').capitalize().strip()
+        if not user_choice in options:
+            print("Ви ввели невідоме значення")
             continue
-    except ValueError:
-        print("Ви ввели заборонений символ, введіть саме ціле число!")
-        continue
-    counter -= 1
-    if user_number == random_number:
-        print(f"Вау!!! Ви вгадали, я дійсно загадав число {random_number}.")
-        break
-    else:
-        if counter > 0:
-            print(f"Нажаль, ви не вгадали. Залишилось {counter} спроб.")
-        else:
-            print(f"Ви програли. Я загадав число {random_number}.")
+        return user_choice
 
+def get_computer_choice():
+    computer_choice = random.choice(options)
+    return computer_choice
+
+def get_winner(user, comp):
+    if user == comp:
+        return "Ми зіграли в нічию!"
+
+    # Камінь
+    if user == "Камінь":
+        if comp == "Ножиці":
+            return "Ви перемогли! Камінь б’є ножиці."
+        else:
+            return "Я переміг! Папір накриває камінь."
+
+    # Ножиці
+    if user == "Ножиці":
+        if comp == "Папір":
+            return "Ви перемогли! Ножиці ріжуть папір."
+        else:
+            return "Я переміг! Камінь ламає ножиці."
+
+    # Папір
+    if user == "Папір":
+        if comp == "Камінь":
+            return "Ви перемогли! Папір накриває камінь."
+        else:
+            return "Я переміг! Ножиці ріжуть папір."
+
+def main():
+    user_choice = get_user_choice()
+    computer_choice = get_computer_choice()
+
+    print(f"Ваш вибір: {user_choice}")
+    print(f"Вибір комп’ютера: {computer_choice}")
+
+    result = get_winner(user_choice, computer_choice)
+    print(result)
+
+main()
