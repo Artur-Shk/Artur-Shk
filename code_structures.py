@@ -639,7 +639,7 @@ options = ["Камінь", "Ножиці", "Папір"]
 def get_user_choice():
     while True:
         user_choice = input('Введіть "Камінь", "Ножиці" чи "Папір": ').capitalize().strip()
-        if not user_choice in options:
+        if user_choice  not in options:
             print("Ви ввели невідоме значення")
             continue
         return user_choice
@@ -684,3 +684,5 @@ def main():
     print(result)
 
 main()
+
+print(globals())
