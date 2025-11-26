@@ -20,9 +20,14 @@ Leonardo da Vinci, "Self-portrait"'''
 rows = [
     ["author", "canvas"],
     ["Vincent Willem van Gogh", "Vase with sunflowers"],
-    ["Rembrandt Harmenszoon van Rijn" "Aristotle"],
+    ["Rembrandt Harmenszoon van Rijn", "Aristotle"],
     ["Leonardo da Vinci", "Self-portrait"]
 ]
-with open("painters.csv", "w", newline='') as p:
-    csvrecord = csv.writer()
-    csvrecord.writerows()
+with open("painters.csv", "w", newline='', encoding="utf-8") as p:
+    csvrecord = csv.writer(p)
+    csvrecord.writerows(rows)
+
+'''Використайте модуль csv і його функцію DictReader(), щоб зчитати вміст файла painters.csv у змінну painters. Виведіть значення змінної на екран.'''
+with open("painters.csv", "r", encoding="utf-8") as f:
+    painters = list(csv.DictReader(f))
+print(*painters, sep="\n")
