@@ -1,0 +1,1 @@
+Test variable to write to fileTest variable to write to file
