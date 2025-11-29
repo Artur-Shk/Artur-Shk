@@ -1,0 +1,5 @@
+In C you can create programs for web development and data analysis.
+In C you can automate routine tasks and work with files.
+In C you can build games and graphical applications.
+In C you can work with databases and APIs.
+In C you can create tests and automate software testing.
