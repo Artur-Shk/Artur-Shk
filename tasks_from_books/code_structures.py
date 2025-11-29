@@ -685,4 +685,3 @@ def main():
 
 main()
 
-print(globals())
